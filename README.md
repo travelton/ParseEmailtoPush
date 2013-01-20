@@ -25,9 +25,9 @@ Setup/Configuration
 --------
 
 **Parse -**  
-1. Create a new Class titled "PushNotifications".  
+1. Create a new Class titled "PushNotifications" (Or whatever you want, define in MG2Parse.php).  
 2. Add the following columns (keep all default columns): channel (string), message (string), sender (string), sent (number).  
-3. Deploy the "main.js" file to your Parse Cloud Code  
+
 
 **Mailgun -**  
 1. Considering your account is already setup to receive email.  
@@ -40,6 +40,11 @@ Note: Requires PHP version 5 or newer.
 2. Store these values in the constants within the configuration section.  
 3. Define the valid "senders" to ensure spammers don't spam your endpoint.  
 4. Disable security during testing, enable when you put in production.  
+
+**Main.js -**  
+1. Open this file and add your domain and Mailgun API key. 
+2. Make modifications as you see fit. (e.g. Adjust the From, Subject and Body fields)
+3. Deploy the script using Parse Cloud Code tools. https://parse.com/docs/cloud_code_guide
 
 **iOS App -**  
 1. Follow the "Quick Start" guidelines to add the Parse SDK to a new or existing app. https://parse.com/apps/quickstart?app_id=mailgun-test-app#ios/blank  
