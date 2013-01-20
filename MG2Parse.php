@@ -96,14 +96,4 @@ default:
 	 echo '<html><head><meta http-equiv="content-type" content="text/html; harset=UTF-8"/><title>Push Confirmation</title></head><style>body{ font-family:"Lucida Grande", Tahoma, Arial, Verdana, sans-serif; background: #F8F8F8; font-size: 12px; } div{ background-color: white; width: 400px; padding: 30px; border: 3px solid #7e7e7e; color: #757575; margin: 0 auto; display: block; margin-top: 100px; } h2 { color: #000000; margin: 0px; margin-bottom: 10px; } </style><body><div class="message"><h2>Error</h2> Sorry, something did not go right.</div><br></body></html>';
 	 break;
 }
-
-
-
-
-
-
-
-
-
-
 ?>

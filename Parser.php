@@ -81,5 +81,4 @@ class Parser{
 		$this->channel = $tempArray[1];
 	}
 }
-
 ?>
