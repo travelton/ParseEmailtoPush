@@ -3,9 +3,12 @@ ParseEmailtoPush
 ParseEmailtoPush is a demo application provided by Mailgun and Parse. It was written to demonstrate the capabilities of combining the Mailgun and Parse platform. The application will accept an email and convert the email to a Push Notification for mobile devices. iOS is used for demonstration purposes.
 
 Mailgun: http://www.mailgun.com
+
 Parse: http://www.parse.com
 
+
 Developed by: Travis Swientek, Mailgun, Inc.
+
 Date: January 20, 2013
 
 
