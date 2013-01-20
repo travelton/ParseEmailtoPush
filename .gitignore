@@ -1,0 +1,5 @@
+#Ignore Espresso Files
+*.esproj
+
+#Silly OSX
+.DS_Store
