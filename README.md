@@ -5,8 +5,9 @@ ParseEmailtoPush is a demo application provided by Mailgun and Parse. It was wri
 Note: This demo application assumes you understand Mailgun, Parse, and iOS programming. For beginners, be sure to follow the guides provided for each "module" on the various platforms. 
 
 Mailgun: http://www.mailgun.com  
-Parse: http://www.parse.com
+Parse: http://www.parse.com  
 
+Webcast Demo: http://blog.parse.com/2013/01/15/register-for-the-webcast-using-email-to-send-push-notifications-with-parse-and-mailgun/  
 
 Developed by: Travis Swientek, Mailgun, Inc.  
 Date: January 20, 2013
