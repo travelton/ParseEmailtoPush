@@ -52,7 +52,7 @@ Note: Requires PHP version 5 or newer.
 1. Follow the "Quick Start" guidelines to add the Parse SDK to a new or existing app. https://parse.com/apps/quickstart?app_id=mailgun-test-app#ios/blank  
 2. Configure your Parse account for iOS Push Notifications. https://parse.com/apps/quickstart_push  
 3. Once your iOS app is configured for Parse and Push Notifications, subscribe yourself to any channel by issuing: 
-   ``[PFPush subscribeToChannel:@"myawesomechannel" error:nil];``
+   ``[PFPush subscribeToChannel:@"myawesomechannel" error:nil];``  
 4. Build and run the app on a physical iOS device, as the simulator cannot handle Push Notifications.  
 5. Test by sending an email to your endpoint.  
 
