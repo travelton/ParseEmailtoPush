@@ -24,24 +24,24 @@ Concept Flow
 Setup/Configuration
 --------
 
-Parse -  
+**Parse -**  
 1. Create a new Class titled "PushNotifications".  
 2. Add the following columns (keep all default columns): channel (string), message (string), sender (string), sent (number).  
 3. Deploy the "main.js" file to your Parse Cloud Code  
 
-Mailgun -  
+**Mailgun -**  
 1. Considering your account is already setup to receive email.  
 2. Go to the Routes tab and add a new Route defined as "push+.*@<yourdomain.com>". Example: push+.*@parsedemo.com  
 3. Set the route to point to the script "MG2Parse.php". Note: You must host this script on a server accessible from the internet.  
 
-MG2Parse.php -  
+**MG2Parse.php -**  
 Note: Requires PHP version 5 or newer.  
 1. Obtain your Mailgun API key, Parse Application ID, and Parse API Key.  
 2. Store these values in the constants within the configuration section.  
 3. Define the valid "senders" to ensure spammers don't spam your endpoint.  
 4. Disable security during testing, enable when you put in production.  
 
-iOS App -  
+**iOS App -**  
 1. Follow the "Quick Start" guidelines to add the Parse SDK to a new or existing app. https://parse.com/apps/quickstart?app_id=mailgun-test-app#ios/blank  
 2. Configure your Parse account for iOS Push Notifications. https://parse.com/apps/quickstart_push  
 3. Once your iOS app is configured for Parse and Push Notifications, subscribe yourself to any channel by issuing "[PFPush subscribeToChannel:@"myawesomechannel" error:nil];"  
