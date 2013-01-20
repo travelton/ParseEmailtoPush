@@ -1,6 +1,8 @@
 ParseEmailtoPush
 ===========
-ParseEmailtoPush is a demo application provided by Mailgun and Parse. It was written to demonstrate the capabilities of combining the Mailgun and Parse platform. The application will accept an email and convert the email to a Push Notification for mobile devices. iOS is used for demonstration purposes.
+ParseEmailtoPush is a demo application provided by Mailgun and Parse. It was written to demonstrate the capabilities of combining the Mailgun and Parse platform. The application will accept an email and convert the email to a Push Notification for mobile devices. iOS is used for demonstration purposes.  
+
+Note: This demo application assumes you understand Mailgun, Parse, and iOS programming. For beginners, be sure to follow the guides provided for each "module" on the various platforms. 
 
 Mailgun: http://www.mailgun.com  
 Parse: http://www.parse.com
@@ -15,36 +17,36 @@ Concept Flow
 
 1. User sends an email to a Mailgun "Route" via defined email address.
 2. Mailgun parses the email and posts the message to route endpoint (MG2Parse.php). 
-3. Endpoint parses the inbound POST and stores received data as a Parse Object.
-4. The Parse Class, upon saving the Object, uses "Cloud Code" to send a confirmation email to the sender. 
+3. MG2Parse.php parses the inbound POST and stores the received data in a Parse Class.
+4. The Parse Class, upon saving the inbound Object, uses "Cloud Code" to send a confirmation email to the sender. 
 5. The confirmation email contains a validation link. The end user clicks the link to validate the Push Notification. 
-6. The endpoint (MG2Parse.php) is called to issue a Push Notification to the Parse REST API.
-7. The push notification is delivered to the mobile clients that are subscribed to that channel.
+6. MG2Parse.php is called to issue a Push Notification to the Parse REST API.
+7. The push notification is delivered to the mobile clients, for the defined channel.
 
 Setup/Configuration
 --------
 
 **Parse -**  
-1. Create a new Class titled "PushNotifications" (Or whatever you want, define in MG2Parse.php).  
-2. Add the following columns (keep all default columns): channel (string), message (string), sender (string), sent (number).  
+1. Create a new Class titled "PushNotifications" (or whatever you want, define in MG2Parse.php).  
+2. Add the following columns (keeping all default columns): channel (string), message (string), sender (string), sent (number).  
 
 
 **Mailgun -**  
-1. Considering your account is already setup to receive email.  
-2. Go to the Routes tab and add a new Route defined as "push+.*@<yourdomain.com>". Example: push+.*@parsedemo.com  
+1. Considering your account is already setup to receive email on a domain.  
+2. Go to the Routes tab and add a new Route defined like "push+.*@<yourdomain.com>". Example: push+.*@parsedemo.com  
 3. Set the route to point to the script "MG2Parse.php". Note: You must host this script on a server accessible from the internet.  
 
 **MG2Parse.php -**  
 Note: Requires PHP version 5 or newer.  
 1. Obtain your Mailgun API key, Parse Application ID, and Parse API Key.  
-2. Store these values in the constants within the configuration section.  
-3. Define the valid "senders" to ensure spammers don't spam your endpoint.  
+2. Add these values, within the constants, for the configuration section.  
+3. Define valid "senders" to ensure spammers don't spam your endpoint.  
 4. Disable security during testing, enable when you put in production.  
 
 **Main.js -**  
-1. Open this file and add your domain and Mailgun API key. 
-2. Make modifications as you see fit. (e.g. Adjust the From, Subject and Body fields)
-3. Deploy the script using Parse Cloud Code tools. https://parse.com/docs/cloud_code_guide
+1. Open this file and add your domain and Mailgun API key.  
+2. Make modifications as you see fit. (e.g. Adjust the From, Subject and Body fields)  
+3. Deploy the script using Parse Cloud Code tools. https://parse.com/docs/cloud_code_guide  
 
 **iOS App -**  
 1. Follow the "Quick Start" guidelines to add the Parse SDK to a new or existing app. https://parse.com/apps/quickstart?app_id=mailgun-test-app#ios/blank  
