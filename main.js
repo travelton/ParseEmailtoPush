@@ -1,5 +1,5 @@
 var mailgun = require('mailgun');
-mailgun.initialize('<yourdomainhere.com', 'key-123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ');
+mailgun.initialize('<yourdomainhere.com>', 'key-123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ');
 
 Parse.Cloud.afterSave("PushNotifications", function(request) {
   var sender = request.object.get("sender");
