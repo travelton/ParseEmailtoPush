@@ -36,6 +36,10 @@ Setup/Configuration
 1. Considering your account is already setup to receive email on a domain.  
 2. Go to the Routes tab and add a new Route defined like "push+.*@<yourdomain.com>". Example: push+.*@parsedemo.com  
 3. Set the route to point to the script "MG2Parse.php". Note: You must host this script on a server accessible from the internet.  
+  
+Mailgun Example -  
+Filter Expression: match_recipient("push+.*@parsedemo.com")  
+Actions: forward("http://parsedemo.com/MG2Parse.php")
 
 **MG2Parse.php -**  
 Note: Requires PHP version 5 or newer.  
